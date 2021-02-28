@@ -1,6 +1,7 @@
 '''
 https://www.hackerearth.com/problem/algorithm/connected-components-in-a-graph/
 '''
+import math
 
 # parse input in vars "n" and "edges"
 n, num_edges = input().split()
@@ -44,7 +45,5 @@ for n, connected_component in node_to_connected_componenet_map.items():
         connected_components.append(set([n]))
 
 # print(connected_components)
+# print(sum(map(lambda x: math.ceil(math.pow(len(x), 0.5) if len(x) > 1 else 1), connected_components))) # For Amazon :)
 print(len(connected_components))
-
-
-
